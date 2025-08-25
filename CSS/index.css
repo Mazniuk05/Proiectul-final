@@ -241,3 +241,36 @@ footer nav ul li:hover {
 .footer-legal-info a:hover {
   text-decoration: underline;
 }
+
+article {
+  background: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Facem grid DOAR pentru galeria de destinații */
+.destinations-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin: 20px 0;
+}
+
+
+.destinations-gallery img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;  /* ca să nu se deformeze */
+}
+video {
+  width: 100%;
+  max-width: 500px;
+  display: block;
+  margin: 30px auto;
+  border: 5px solid #eee;       /* cadru subtil */
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
