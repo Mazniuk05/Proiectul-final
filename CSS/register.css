@@ -1,148 +1,169 @@
-/* ====== Reset & Stil de bază ====== */
-/* Eliminăm marginile și padding-ul implicite și setăm box-sizing */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+@import url('./theme.css');
+
+#steps-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
 }
 
-/* Setăm fontul principal și stilul de bază pentru pagină */
-body {
-  font-family: "Space Grotesk", sans-serif;
-  background: #f8f9fa; /* fundal gri deschis */
-  color: #333;         /* culoare text */
-  line-height: 1.5;    /* spațiere între rânduri */
+#stepTitle {
+    margin-top: 32px !important;
 }
 
-/* Layout principal împărțit în două coloane (formular + imagine) */
-main {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  height: 100vh; /* ocupă toată înălțimea paginii */
-}
-
-/* ====== Secțiunea stângă ====== */
-#left {
-  display: flex;
-  justify-content: center; /* centrare pe orizontală */
-  align-items: center;     /* centrare pe verticală */
-  padding: 2rem;
-}
-
-/* Container formular */
 #form-container {
-  background: #fff;
-  padding: 2rem 2.5rem;
-  border-radius: 1rem; /* colțuri rotunjite */
-  box-shadow: 0 8px 20px rgba(0,0,0,0.08); /* umbră subtilă */
-  width: 100%;
-  max-width: 420px; /* nu se lărgește peste această dimensiune */
+    max-width: 695px !important;
 }
 
-/* Titlul formularului */
-#form-container h1 {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #2b2d42;
-  margin-bottom: 1.5rem;
-  text-align: center;
+.step {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    color: #858C95;
+    white-space: nowrap;
 }
 
-/* ====== Formular ====== */
-/* Rând pentru fiecare câmp */
-.form-row {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 1.2rem;
+.step div {
+    width: 31px;
+    height: 31px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #EAEBF0;
+    border-radius: 100%;
+
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
 }
 
-/* Etichetele câmpurilor */
-.form-row label {
-  font-size: 0.95rem;
-  font-weight: 500;
-  margin-bottom: 0.5rem;
-  color: #444;
+.step span {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 600;
 }
 
-/* Câmpurile de input */
-.form-row input {
-  padding: 0.8rem 1rem;
-  border: 1.5px solid #ddd;
-  border-radius: 0.6rem;
-  font-size: 1rem;
-  transition: all 0.2s ease-in-out;
+.step-divider {
+    display: flex;
+    align-items: center;
 }
 
-/* Efect când utilizatorul scrie în câmp */
-.form-row input:focus {
-  border-color: #4f46e5; /* violet */
-  box-shadow: 0 0 0 3px rgba(79,70,229,0.2);
-  outline: none;
+.step-active>span {
+    color: var(--primary);
 }
 
-/* ====== Butoane ====== */
-/* Stil general pentru butoane */
-.auth-button {
-  cursor: pointer;
-  padding: 0.9rem 1rem;
-  font-size: 1rem;
-  font-weight: 600;
-  border: none;
-  border-radius: 0.6rem;
-  transition: all 0.3s ease;
+.step-active div {
+    background-color: var(--primary);
+    color: white
 }
 
-/* Buton complet (Sign Up) */
-.btn-full {
-  width: 100%;
-  background: #4f46e5; /* violet */
-  color: #fff;
+.registration-success {
+    text-align: center;
+    font-size: 16px;
+    line-height: 24px;
+    color: #858C95;
 }
 
-/* Efect hover pe buton */
-.btn-full:hover {
-  background: #3730a3; /* violet mai închis */
+.registration-success img {
+    max-width: 352px;
+
+    margin: 32px auto;
 }
 
-/* ====== Text sub formular ====== */
-.sub-form-paragraph {
-  text-align: center;
-  margin-top: 1.2rem;
-  font-size: 0.95rem;
-  color: #555;
+.step-divider svg {
+    color: #EAEBF0;
 }
 
-.sub-form-paragraph a {
-  color: #4f46e5;
-  text-decoration: none;
-  font-weight: 600;
+.step-divider-passed svg {
+    color: var(--primary);
 }
 
-.sub-form-paragraph a:hover {
-  text-decoration: underline;
-}
-
-/* ====== Secțiunea dreaptă (Imagine) ====== */
-#right {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #f3f4f6;
-}
-
-#right img {
-  max-width: 100%;
-  height: 100vh;   /* imaginea ocupă toată înălțimea */
-  object-fit: cover; /* imaginea se taie frumos fără să se deformeze */
-}
-
-/* ====== Responsive (pentru mobil) ====== */
-/* Sub 900px ascundem imaginea și păstrăm doar formularul */
-@media (max-width: 900px) {
-  main {
-    grid-template-columns: 1fr;
-  }
-  #right {
+.step svg {
     display: none;
-  }
+}
+
+.step-completed svg {
+    display: block;
+}
+
+.step-completed .step-index {
+    display: none;
+}
+
+.step-completed {
+    color: var(--primary);
+}
+
+.step-completed .step-circle {
+    background-color: var(--primary);
+}
+
+.dropdown-wrapper svg {
+    width: 20px;
+    height: 20px;
+
+    position: absolute;
+    right: 16px;
+}
+
+.dropdown {
+    position: relative;
+    width: 100%;
+}
+
+.dropdown-trigger {
+    font-size: 15px;
+    line-height: 22px;
+    color: #858C95;
+
+    padding: 13px 12px;
+
+    border: 1px solid #EAEBF0;
+    border-radius: 8px;
+    background-color: var(--base);
+
+    box-sizing: border-box;
+    width: 100%;
+
+    cursor: pointer;
+    text-align: left;
+}
+
+.dropdown-menu {
+    min-width: 100%;
+    background-color: white;
+    border: 1px solid #EAEBF0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    z-index: 9999;
+    list-style: none;
+    padding: 8px 0;
+    border-radius: 8px;
+}
+
+.dropdown-wrapper {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-menu li {
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #323539;
+}
+
+.dropdown-menu li:hover {
+    background-color: #ECF4FC;
+    color: var(--primary);
+}
+
+.error-toast {
+    font-weight: 500;
+    border-radius: 8px !important;
+    padding: 10px 14px !important;
 }

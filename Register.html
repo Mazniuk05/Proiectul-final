@@ -1,84 +1,370 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link
+      rel="stylesheet"
+      type="text/css"
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 
-        <link
-            href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"
-            rel="stylesheet"
-        />
-        <link rel="stylesheet" href="./CSS/global.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"
+      rel="stylesheet"
+    />
 
-        <title>Register Ghid Turistic</title>
-    </head>
+    <link rel="stylesheet" href="./CSS/register.css" />
+    <link rel="stylesheet" href="./CSS/global.css" />
 
-    <body>
-        <main>
-            <div id="left">
-                <div id="form-container">
-                    <div>
-                        <h1>Sign Up</h1>
-                    </div>
-                    
-                    <form onsubmit="registerHandler(event)">
-                        <div class="form-row">
-                            <label for="email">Your Email*</label>
-                            <input
-                                required
-                                type="email"
-                                name="email"
-                                placeholder="Insert your email"
-                            >
-                        </div>
+    <title>Messenger: Register</title>
+  </head>
 
-                        <div class="form-row">
-                            <label for="password">Password*</label>
-                            <input
-                                required
-                                type="password"
-                                name="password"
-                                minlength="8"
-                                maxlength="16"
-                                placeholder="Insert your password"
-                            >
-                        </div>
+  <body>
+    <main>
+      <div id="bg-container">
+        <img src="./images/Register.jpeg" alt="Ocean view" />
 
-                        <div class="form-row">
-                            <label for="confirmPassword">Confirm Password*</label>
-                            <input
-                                required
-                                type="password"
-                                name="confirmPassword"
-                                minlength="8"
-                                maxlength="16"
-                                placeholder="Confirm your password"
-                            >
-                        </div>
+        <div id="overlay"></div>
+      </div>
 
-                        <input type="submit" value="Sign Up" class="auth-button btn-full">
-                    </form>
+      <div id="form-container">
+        <div id="steps-container">
+          <div class="step step-active" data-step-order="1">
+            <div class="step-circle">
+              <span class="step-index">1</span>
 
-                    <div>
-                        <p class="sub-form-paragraph paragraph-l">
-                            Already have an account?
-                            <a href="./login.html">Log in</a>
-                        </p>
-                    </div>
-                </div>
+              <svg
+                width="17"
+                height="16"
+                viewBox="0 0 17 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M13.8334 4.66675L6.97149 11.5287C6.71114 11.789 6.28903 11.789 6.02868 11.5287L3.16675 8.66675"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+              </svg>
             </div>
 
-            <div id="right">
-            <img src="./images/Register.jpeg" alt="">
-            </div>
-        </main>
+            <span>Account information</span>
+          </div>
 
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-        <script src="./scripts/register.js"></script>
-    </body>
+          <div class="step-divider" data-divider-order="1">
+            <svg
+              width="33"
+              height="2"
+              viewBox="0 0 33 2"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <line
+                x1="1.5"
+                y1="1"
+                x2="31.5"
+                y2="1"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-dasharray="4 8"
+              />
+            </svg>
+          </div>
+
+          <div class="step" data-step-order="2">
+            <div class="step-circle">
+              <span class="step-index">2</span>
+
+              <svg
+                width="17"
+                height="16"
+                viewBox="0 0 17 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M13.8334 4.66675L6.97149 11.5287C6.71114 11.789 6.28903 11.789 6.02868 11.5287L3.16675 8.66675"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </div>
+
+            <span>Email</span>
+          </div>
+
+          <div class="step-divider" data-divider-order="2">
+            <svg
+              width="33"
+              height="2"
+              viewBox="0 0 33 2"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <line
+                x1="1.5"
+                y1="1"
+                x2="31.5"
+                y2="1"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-dasharray="4 8"
+              />
+            </svg>
+          </div>
+
+          <div class="step" data-step-order="3">
+            <div class="step-circle">
+              <span class="step-index">3</span>
+
+              <svg
+                width="17"
+                height="16"
+                viewBox="0 0 17 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M13.8334 4.66675L6.97149 11.5287C6.71114 11.789 6.28903 11.789 6.02868 11.5287L3.16675 8.66675"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </div>
+
+            <span>Password</span>
+          </div>
+
+          <div class="step-divider" data-divider-order="3">
+            <svg
+              width="33"
+              height="2"
+              viewBox="0 0 33 2"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <line
+                x1="1.5"
+                y1="1"
+                x2="31.5"
+                y2="1"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-dasharray="4 8"
+              />
+            </svg>
+          </div>
+
+          <div class="step" data-step-order="4">
+            <div class="step-circle">
+              <span class="step-index">4</span>
+
+              <svg
+                width="17"
+                height="16"
+                viewBox="0 0 17 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M13.8334 4.66675L6.97149 11.5287C6.71114 11.789 6.28903 11.789 6.02868 11.5287L3.16675 8.66675"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </div>
+
+            <span>Create account</span>
+          </div>
+        </div>
+
+        <h1 id="stepTitle">Account information</h1>
+
+        <form class="" data-step-index="1" onsubmit="formSubmitHandler(event)">
+          <div class="form-row">
+            <label for="name"
+              >Your name & surname <span class="field-required">*</span></label
+            >
+            <input name="name" placeholder="Insert name" required />
+          </div>
+
+          <div class="form-row">
+            <label for="country"
+              >Your country of living<span class="field-required"
+                >*</span
+              ></label
+            >
+
+            <div class="dropdown-wrapper">
+              <div class="dropdown" data-dropdown>
+                <button type="button" class="dropdown-trigger">
+                  Select your country
+                </button>
+
+                <ul class="dropdown-menu hidden">
+                  <li data-value="MD">Moldova</li>
+                  <li data-value="RO">Romania</li>
+                  <li data-value="UA">Ukraina</li>
+                </ul>
+
+                <input type="hidden" name="country" />
+              </div>
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="m19.5 8.25-7.5 7.5-7.5-7.5"
+                />
+              </svg>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label for="city"
+              >Your city of living<span class="field-required">*</span></label
+            >
+
+            <div class="dropdown-wrapper">
+              <div class="dropdown" data-dropdown>
+                <button type="button" class="dropdown-trigger">
+                  Select your city
+                </button>
+
+                <ul class="dropdown-menu hidden">
+                  <li data-value="Chisinau">Chisinau</li>
+                  <li data-value="Orhei">Orhei</li>
+                  <li data-value="Balti">Balti</li>
+                </ul>
+
+                <input type="hidden" name="city" />
+              </div>
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="m19.5 8.25-7.5 7.5-7.5-7.5"
+                />
+              </svg>
+            </div>
+          </div>
+
+          <div id="submit-btn-container">
+            <button type="submit" class="btn-primary btn-full">
+              Next step
+            </button>
+          </div>
+        </form>
+
+        <form
+          class="hidden"
+          data-step-index="2"
+          onsubmit="formSubmitHandler(event)"
+        >
+          <div class="form-row">
+            <label for="email"
+              >Email address <span class="field-required">*</span></label
+            >
+            <input placeholder="Insert email" name="email" required />
+          </div>
+
+          <div id="submit-btn-container">
+            <button type="submit" class="btn-primary btn-full">
+              Next step
+            </button>
+          </div>
+        </form>
+
+        <form
+          class="hidden"
+          data-step-index="3"
+          onsubmit="formSubmitHandler(event)"
+        >
+          <div class="form-row">
+            <label for="password"
+              >Password <span class="field-required">*</span></label
+            >
+            <input
+              type="password"
+              name="password"
+              placeholder="Type your password"
+              required
+            />
+
+            <p class="field-description">
+              Tha password should be at least 6 characters, use a upper case and
+              special character.
+            </p>
+          </div>
+
+          <div class="form-row">
+            <label for="confirmPassword"
+              >Password confirmation
+              <span class="field-required">*</span></label
+            >
+            <input
+              type="password"
+              name="confirmPassword"
+              placeholder="Repeat your password"
+              required
+            />
+          </div>
+
+          <div id="submit-btn-container">
+            <button type="submit" class="btn-primary btn-full">
+              Next step
+            </button>
+          </div>
+        </form>
+
+        <div class="registration-success hidden" data-step-index="4">
+          <p>Congratulations, you have now created your account!</p>
+
+          <img
+            src="./images/registration-success.png"
+            alt="Registration success"
+          />
+
+          <button
+            class="btn-primary btn-full"
+            onclick="completeRegisterHandler()"
+          >
+            Let’s star chatting!
+          </button>
+        </div>
+
+        <div id="form-footer">
+          <p>
+            Already have an account?
+            <a href="" class="link-primary"> Log In </a>
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+    <script src="./JavaScript/register.js" type="module"></script>
+  </body>
 </html>

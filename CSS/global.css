@@ -1,136 +1,184 @@
-/* ====== Reset & Stil de bază ====== */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+@import url('./theme.css');
+
+.error-toast {
+  background: #FF453A;
 }
 
-body {
-  font-family: "Space Grotesk", sans-serif;
-  background: #f8f9fa;
-  color: #333;
-  line-height: 1.5;
+.success-toast {
+  background: rgb(97, 222, 97);
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0 !important;
+}
+
+html {
+    font-family: Inter;
 }
 
 main {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  height: 100vh;
+    min-height: 500vh;
+    background: white;
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-/* ====== Secțiunea stângă (formular) ====== */
-#left {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem;
+#bg-container {
+    margin: 48px;
+    position: relative;
+
+    height: calc(100vh - 96px);
+    width: 100%;
+
+    border-radius: 32px;
+    overflow: hidden;
 }
 
-#form-container {
-  background: #fff;
-  padding: 2rem 2.5rem;
-  border-radius: 1rem;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-  width: 100%;
-  max-width: 420px;
+#bg-container img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center center;
 }
 
-#form-container h1 {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #2b2d42;
-  margin-bottom: 1.5rem;
-  text-align: center;
+#overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
 }
 
-/* ====== Formular ====== */
-.form-row {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 1.2rem;
+label {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+    color: #323539;
+
+    margin-bottom: 8px;
+
+    display: block;
+    width: fit-content;
 }
 
-.form-row label {
-  font-size: 0.95rem;
-  font-weight: 500;
-  margin-bottom: 0.5rem;
-  color: #444;
+input, select {
+    font-size: 15px;
+    line-height: 22px;
+    color: #858C95;
+
+    padding: 13px 12px;
+
+    border: 1px solid #EAEBF0;
+    border-radius: 8px;
+    background-color: var(--base);
+
+    box-sizing: border-box;
+    width: 100%;
 }
 
-.form-row input {
-  padding: 0.8rem 1rem;
-  border: 1.5px solid #ddd;
-  border-radius: 0.6rem;
-  font-size: 1rem;
-  transition: all 0.2s ease-in-out;
+input:focus, select:focus {
+    outline: none;
 }
 
-.form-row input:focus {
-  border-color: #4f46e5;
-  box-shadow: 0 0 0 3px rgba(79,70,229,0.2);
-  outline: none;
-}
+.btn-primary {
+    background-color: var(--primary);
+    color: white;
 
-/* ====== Butoane ====== */
-.auth-button {
-  cursor: pointer;
-  padding: 0.9rem 1rem;
-  font-size: 1rem;
-  font-weight: 600;
-  border: none;
-  border-radius: 0.6rem;
-  transition: all 0.3s ease;
+    font-size: 15px;
+    line-height: 22px;
+    font-weight: 600;
+
+    padding: 13px 12px;
+
+    border: none;
+    border-radius: 8px;
+
+    cursor: pointer;
 }
 
 .btn-full {
-  width: 100%;
-  background: #4f46e5;
-  color: #fff;
+    width: 100%;
 }
 
-.btn-full:hover {
-  background: #3730a3;
+a {
+    text-decoration: none;
 }
 
-/* ====== Text sub formular ====== */
-.sub-form-paragraph {
-  text-align: center;
-  margin-top: 1.2rem;
-  font-size: 0.95rem;
-  color: #555;
+a:hover {
+    text-decoration: underline;
+    text-underline-offset: 2px;
 }
 
-.sub-form-paragraph a {
-  color: #4f46e5;
-  text-decoration: none;
-  font-weight: 600;
+.link-primary {
+    color: var(--primary) !important;
+    font-weight: 600 !important;
 }
 
-.sub-form-paragraph a:hover {
-  text-decoration: underline;
+#form-container {
+    background-color: white;
+    border-radius: 24px;
+    overflow: hidden;
+
+    padding: 24px;
+
+    width: 100%;
+    max-width: 472px;
+
+    position: absolute;
 }
 
-/* ====== Secțiunea dreaptă (imagine) ====== */
-#right {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #f3f4f6;
+#form-container form {
+    margin-top: 32px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
 }
 
-#right img {
-  max-width: 100%;
-  height: 100vh;
-  object-fit: cover;
+#form-footer {
+    margin-top: 24px;
 }
 
-/* ====== Responsive (pentru mobil) ====== */
-@media (max-width: 900px) {
-  main {
-    grid-template-columns: 1fr;
-  }
-  #right {
-    display: none;
-  }
+#form-container h1 {
+    color: #323539;
+    
+    font-size: 36px;
+    line-height: 44px;
+    font-weight: 700;
+
+    text-align: center;
 }
 
+#form-footer p {
+    color: #858C95;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.field-required {
+    color: var(--primary);
+}
+
+.hidden {
+    display: none !important;
+}
+
+.field-description {
+    font-size: 14px;
+    line-height: 20px;
+    color: #858C95;
+
+    margin-top: 8px;
+}

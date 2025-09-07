@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="./CSS/index.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="./JavaScript/index.js"></script>
 
 </head>
 <body>
@@ -16,9 +17,9 @@
       <ul>
         <li><a href="">Acasă</a></li>
         <li><a href=#destinatii>Destinații</a></li>
-        <li><a href="">Harta/Traseul meu</a></li>
-        <li><a href="">Contacte</a></li>
-        <li><a href="">Autentificare</a></li>
+        <li><a href="#harta">Harta/Traseul meu</a></li>
+        <li><a href="#contacte">Contacte</a></li>
+        <li><a href="./Login.html">Autentificare</a></li>
       </ul>
     </nav>
   </header>
@@ -45,7 +46,7 @@ Fie că îți dorești aventuri în natură, explorări culturale sau escapade u
       <div >
         <article>
         <div>
-          <h3><a href="">Italia de Nord</a></h3>
+          <h3>Italia de Nord</h3>
           <p>Italia de Nord este o lume a eleganței și rafinamentului, unde istoria întâlnește modernitatea în armonie perfectă. Aici, munții semeți se întâlnesc cu lacuri cristaline, iar peisajele naturale sunt completate de orașe vibrante, pline de artă, cultură și tradiții. Atmosfera este dominată de stilul sofisticat, gastronomia rafinată și peisajele pitorești care îți încântă privirea la fiecare pas.</p>
           <div class="destinations-gallery">
               <img src="./images/Milano.jpg" alt="Milano"> 
@@ -53,7 +54,7 @@ Fie că îți dorești aventuri în natură, explorări culturale sau escapade u
               <img src="./images/Torino.jpg" alt="Torino">
               <p><strong>Torino</strong> - Un oraș cu aer nobil, unde palate istorice și colecții muzeale îți povestesc despre un trecut glorios.</p> 
               <img src="./images/Verona.jpg" alt="Verona">
-              <p><strong>Verona</strong> - Ooraș romantic și plin de farmec, cu ruine antice care încă păstrează misterul legendelor de dragoste.</p>
+              <p><strong>Verona</strong> - Oraș romantic și plin de farmec, cu ruine antice care încă păstrează misterul legendelor de dragoste.</p>
               <img src="./images/Lacul Como.jpg" alt="Lacul Como">
               <p><strong>Lacul Como</strong> - Un refugiu idilic, cu ape limpezi și peisaje montane ce par pictate, perfect pentru relaxare și contemplare.</p>
               <img src="./images/Cinque Terre.jpg" alt="Cinque Terre">
@@ -91,10 +92,10 @@ Fie că îți dorești aventuri în natură, explorări culturale sau escapade u
         </article>
         <article>
         <div>
-          <h3><a href="">Italia Centrală</a></h3>
+          <h3>Italia Centrală</h3>
           <p>Inima Italiei pulsează în această regiune încărcată de artă și patrimoniu cultural. Tărâmul este o poveste vie a trecutului glorios, cu peisaje variate ce cuprind dealuri blânde, câmpii fertile și râuri ce șerpuiesc printre văi. Este locul unde spiritualitatea, cultura și natura se întâlnesc pentru a crea o experiență profundă și memorabilă, ce îți îmbogățește sufletul și mintea.</p>
           <div class="destinations-gallery">
-            <img src="./images/">
+            <img src="./images/Roma.jpg" alt="Roma">
           <p><strong>Roma</strong> - Orașul etern care îmbină ruinele antice cu viața modernă vibrantă, plin de piețe animate și monumente care spun povești milenare.</p>
           <Img src="./images/Florence.jpg" alt="Florenta">
           <P><strong>Florenta
@@ -140,7 +141,7 @@ Fie că îți dorești aventuri în natură, explorări culturale sau escapade u
         </article>
         <article>
         <div>
-           <h3><a href="">Italia de Sud</a></h3>
+           <h3>Italia de Sud</h3>
            <p>Italia de Sud este un colț de lume plin de pasiune, culoare și contrast. Aici, marea întâlnește muntele în peisaje dramatice, iar atmosfera este încărcată de tradiții autentice și o energie caldă, primitoare. Fiecare apus pare pictat, iar gusturile locale și aromele mediteraneene te îmbie la descoperiri culinare savuroase. Este un loc al poveștilor vechi, al legendei și al peisajelor ce rămân pentru totdeauna în inimă.
 
 </p>
@@ -188,7 +189,7 @@ Fie că îți dorești aventuri în natură, explorări culturale sau escapade u
       </article>
       <article>
       <div>
-        <h3><a href="">Insulele Italiei</a></h3>
+        <h3>Insulele Italiei</h3>
       <p>Insulele Italiei - un arhipelag de vis, unde natura și cultura se împletesc într-o simfonie de frumusețe și tradiție. De la plajele cu nisip fin și ape turcoaz, până la orașele istorice ce păstrează amprenta civilizațiilor trecute, fiecare insulă are propria poveste de spus. Este un loc unde timpul pare să stea în loc, iar fiecare zi aduce noi descoperiri și momente de neuitat.</p>
       <div class="destinations-gallery">
         <img src="./images/Sicilia.jpg" alt="Sicilia">
@@ -196,28 +197,41 @@ Fie că îți dorești aventuri în natură, explorări culturale sau escapade u
           <img src="./images/Sardinia.jpg" alt="Sardinia">
           <p><strong>Sardinia</strong> - Un tărâm de plaje virgine și ape cristaline, cu o natură sălbatică și tradiții care dau farmec acestei insule magnifice.</p>
       </div>
-      <div>
-        <h3><a href="">Vatican</a></h3>
-      <p>Un centru al spiritualității și al artei, unde trecutul și prezentul se întâlnesc în armonie. Simbol al credinței, dar și al frumuseții universale.</p>
+      <div class="destinations-gallery">
+        <img src="./images/Vatican.JPG" alt="Vatican">
+        <p><strong>Vatican</strong> - Un centru al spiritualității și al artei, unde trecutul și prezentul se întâlnesc în armonie. Simbol al credinței, dar și al frumuseții universale.</p>
       </div>
+       <a href="" target="_self" class="link">
+              Alegerea destinației
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+                />
+              </svg>
+            </a>
+            </div>
       </div>
         </div>
       </div>
       </article>
         </div>
-          <section>
-        <div>
-        <h2>🌍 Harta </h2>
-</div>
-<div id="map" style="height:500px;"></div>
-<script>
-  var map = L.map('map').setView([41.54, 12.29], 6);
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 19,
-  }).addTo(map);
-</script>
 
-      </section>
+          <section id="harta">
+        <div>
+        <h2>Harta </h2>
+      <div id="map" style="height:500px;"></div>
+    </section>
+
      <!-- Contact form -->
       <section>
         <div class="section-description">
@@ -276,25 +290,16 @@ Fie că îți dorești aventuri în natură, explorări culturale sau escapade u
       <footer>
         <div class="container">
         <div class="footer-info">
-          
-            <img src="" alt="" />
-          
-          <nav >
-            <ul class="nav-menu" footer-nav-menu>
-              <li>Home</li>
-              <li>About</li>
-              <li>Contact</li>
-              <li>Reports</li>
-              <li>Disclaimer</li>
-            </ul>
-          </nav>
+          <h3 id="contacte">Date de contact:</h3>
+         <span>Adresa: mun. Chișinău, sect. Rîșcani str. Andrei Doga</span><br>
+         <span>Email: dolcevita@gmail.com</span><br>
+         <span>Contacte: +37371234567</span>
           <div>
 
           <div class="social-media-icons-containers">
-            <img src="./images/Social platforms logos_1_last_section.png" alt="Facebook" />
-            <img src="./images/Social platforms logos_2_last_section.png" alt="Google" />
-            <img src="./images/Social platforms logos_3_last_section.png" alt="Linkendin" />
-            <img src="./images/Social platforms logos_4_last_section.png" alt="Instagram" />
+            <a href="https://www.facebook.com/"><img src="./images/Social platforms logos_1_last_section.png" alt="Facebook" /></a>
+            <a href="https://www.linkedin.com/""><img src="./images/Social platforms logos_3_last_section.png" alt="Linkendin" /></a>
+            <a href="https://www.instagram.com/"><img src="./images/Social platforms logos_4_last_section.png" alt="Instagram" /></a>
           </div>
         </div>
 
@@ -311,5 +316,16 @@ Fie că îți dorești aventuri în natură, explorări culturale sau escapade u
         </div>
         </div>
         </footer>
+      <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var map = L.map('map').setView([41.54, 12.29], 6);
+
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19
+      }).addTo(map);
+    });
+  </script>
+  <script src="./JavaScript/index.js"></script>
 </body>
 </html>
